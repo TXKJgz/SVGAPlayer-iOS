@@ -380,7 +380,7 @@ static NSOperationQueue *unzipQueue;
     unsigned full_length = (unsigned)[data length];
     unsigned half_length = (unsigned)[data length] / 2;
     
-    NSMutableData *decompressed = [NSMutableData dataWithLength: full_length + half_length];
+    NSMutableData *decompressed = [NSMutableData dataWithLength: full_length + half_length].mutableCopy;
     BOOL done = NO;
     int status;
     
